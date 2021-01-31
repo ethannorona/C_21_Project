@@ -34,21 +34,14 @@ function setup(){
     box.velocityX = -3;
     box.velocityY = 5;
 
-    createEdgeSprites();
-
-
 }
 
 function draw() {
     background(rgb(169,169,169));
     //create edgeSprite
-    createEdgeSprites();
+    edges = createEdgeSprites();
 
-    //box.bounceOff(topEdge);
-    //box.bounceOff(bottomEdge);
-    //box.bounceOff(leftEdge);
-    //box.bounceOff(rightEdge);
-    //box.bounceOff(edges);
+    box.bounceOff(edges);
 
     console.log(surface4.y - box.x);
     console.log(surface4.height/2 + box.height/2);
